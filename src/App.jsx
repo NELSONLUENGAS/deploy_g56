@@ -12,6 +12,7 @@ import DashboardPage from './views/DashboardPage';
 import LoginPage from './views/LoginPage';
 import RegisterPage from './views/RegisterPage';
 import ProfilePage from './views/ProfilePage';
+import CartPage from './views/CartPage';
 
 function App() {
 	return (
@@ -41,6 +42,11 @@ function App() {
 									<Route
 										path="register"
 										element={<RegisterPage />}
+									/>
+
+									<Route
+										path="cart"
+										element={<CartPage />}
 									/>
 
 									{/* AS Outlet */}
