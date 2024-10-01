@@ -11,6 +11,7 @@ import { AdminLayout } from './layouts/AdminLayout';
 import DashboardPage from './views/DashboardPage';
 import LoginPage from './views/LoginPage';
 import RegisterPage from './views/RegisterPage';
+import ProfilePage from './views/ProfilePage';
 
 function App() {
 	return (
@@ -41,6 +42,27 @@ function App() {
 										path="register"
 										element={<RegisterPage />}
 									/>
+
+									{/* AS Outlet */}
+									<Route
+										path="profile"
+										element={<AuthGuard />}
+									>
+										<Route
+											index
+											element={<ProfilePage />}
+										/>
+									</Route>
+
+									{/* As children */}
+									{/* <Route
+										path="profile"
+										element={
+											<AuthGuard redirectTo="/login">
+												<ProfilePage />
+											</AuthGuard>
+										}
+									/> */}
 								</Route>
 
 								{/* admin routes */}

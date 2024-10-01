@@ -1,12 +1,9 @@
-import { Menu, theme } from 'antd';
+import { Menu } from 'antd';
 import { Header } from 'antd/es/layout/layout';
 import { NavLink } from 'react-router-dom';
 import { SwitchAdmin } from './SiwtchAdmin';
 
 export const PokeHeader = () => {
-	const {
-		token: { colorBgContainer, borderRadiusLG },
-	} = theme.useToken();
 	const handleItemSelected = ({ isActive }) =>
 		isActive
 			? ' text-center bg-secondary text-white'
