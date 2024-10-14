@@ -32,7 +32,7 @@ const all = async () => {
     try {
         const SQLRequest = "SELECT * FROM users"
 
-        const { rows: response } = await db.query(SQLRequest, SQLValues)
+        const { rows: response } = await db.query(SQLRequest)
 
         return response
     } catch (error) {
