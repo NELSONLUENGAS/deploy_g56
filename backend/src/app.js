@@ -10,8 +10,8 @@ app.use(morgan('dev'))
 
 app.use('/api', router)
 
-app.use((error, req, res) => {
-    console.error(error)
+app.use((err, req, res, next) => {
+    console.error(err.stack)
     res.status(500).send('Server error')
 })
 
