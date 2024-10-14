@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useUser } from '../hooks/UseUser';
 
 const HomePage = () => {
-  return (
-    <div>HomePage</div>
-  )
-}
+	const { users } = useUser();
 
-export default HomePage
+	console.log(users);
+	return <div>HomePage</div>;
+};
+
+export default HomePage;
