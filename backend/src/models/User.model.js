@@ -31,7 +31,6 @@ const findOneByEmail = async (email) => {
 const all = async () => {
     try {
         const SQLRequest = "SELECT * FROM users"
-        const SQLValues = [email]
 
         const { rows: response } = await db.query(SQLRequest, SQLValues)
 
